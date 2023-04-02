@@ -9,14 +9,15 @@ function Home() {
 			</div>
 
 			<div className='right-view'>
-				<h1>Ride Safe</h1>
+				<h1>Ride Safe with</h1>
+				<h2>Enhanced Hemlet</h2>
 				<p>
-					t is a long established fact that a reader will be distracted by the
-					readable content of a page when looking at its layout. The point of using
-					Lorem Ipsum is that it has a more-or-less normal distribution of letters,
-					as opposed to using 'Content here, content here', making it look like
-					readable English. Many de
+					Helmets are a crucial part of a person’s travel to their destination, so a
+					helmet doesn't need to be boring and basic. Helmets can be used as a tool
+					for a person to be more focused on the road
 				</p>
+
+				<div className='login-btn'>Sign In</div>
 			</div>
 		</div>
 	)

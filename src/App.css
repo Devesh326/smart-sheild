@@ -2,20 +2,21 @@
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
+	background-color: #070e32;
+	color: rgba(255, 255, 255, 0.792);
 }
 
 .section-one {
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
-	width: 80%;
-	height: 100vh;
-	margin: auto;
+	height: 90vh;
 }
 
 .helmet {
 	width: 100%;
 	border-radius: 8px;
+	opacity: 0.7;
 }
 
 .left-view {
@@ -23,5 +24,131 @@
 }
 
 .right-view {
+	margin-top: -20px;
 	width: 45%;
+}
+
+.right-view h1 {
+	margin-bottom: 10px;
+	font-weight: 400;
+	font-size: 2.2rem;
+}
+
+.right-view h2 {
+	font-size: 3rem;
+	margin-bottom: 15px;
+}
+
+.right-view p {
+	font-size: 1.2rem;
+}
+
+.login-btn {
+	background: #6ccbcb;
+	padding: 5px;
+	color: black;
+	font-size: 1.3rem;
+	font-weight: 500;
+	width: 20%;
+	text-align: center;
+	border-radius: 4px;
+	margin-top: 40px;
+	cursor: pointer;
+}
+
+.card {
+	background-color: #1d233c;
+	width: 80%;
+	height: 10rem;
+	border: 2px solid #1d233c;
+	color: white;
+	margin: 20px auto;
+	border-radius: 10px;
+	position: relative;
+	overflow: hidden;
+}
+
+.image {
+	position: absolute;
+	object-fit: cover;
+	width: 100%;
+	/* z-index: -1; */
+}
+
+.contain {
+	background-color: #1d233c;
+}
+
+.card-title {
+	font-weight: 600;
+	margin: 20px 0;
+	font-size: 1.2rem;
+	/* z-index: 100; */
+}
+
+.container {
+	width: 80%;
+	margin: auto;
+}
+
+.feature {
+	padding-top: 20px;
+	font-size: 2rem;
+	font-weight: 600;
+	color: white;
+	text-align: center;
+	margin-bottom: 20px;
+}
+
+.features {
+	min-height: 120vh;
+	background-color: #070e32;
+}
+
+.intro {
+	text-align: center;
+	color: white;
+	font-size: 1rem;
+	margin-bottom: 40px;
+}
+
+.navbar {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 20px 0;
+	font-size: 1rem;
+}
+
+.navbar .logo {
+	font-size: 1.5rem;
+	font-weight: 600;
+	color: white;
+}
+
+.nav-links {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	list-style: none;
+}
+
+.nav-links li {
+	margin: 0 20px;
+	width: 100px;
+	padding: 5px 10px;
+	text-align: center;
+	text-decoration: none;
+}
+
+.active {
+	background-color: #6ccbcb;
+	color: black;
+	border-radius: 8px;
+	font-weight: 500;
+}
+
+.inactive {
+	background-color: #070e32;
+	color: white;
 }
