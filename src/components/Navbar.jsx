@@ -1,9 +1,14 @@
 import { NavLink, Link } from 'react-router-dom'
+import { useAuth } from '../context/AuthContext'
+import Download from './Download'
+import { useState } from 'react'
 
 function Navbar() {
+	const { loginText, logout, setLoginText } = useAuth()
+	const [login, setLogin] = useState('Login')
 	return (
 		<>
-			<nav className='navbar navbar-expand-lg navbar-light bg-light'>
+			<nav className='navbar navbar-expand-lg navbar-light'>
 				<div className='logo'>
 					{/* <img src={logo} alt="" /> */}
 					<Link
@@ -15,21 +20,20 @@ function Navbar() {
 							color: 'white',
 						}}
 					>
-						SMARTSHEILD
+						VIGILANCE HELMET
 					</Link>
 				</div>
 				<div>
 					<ul className='nav-links'>
-						<li>
-							<NavLink
-								className={({ isActive }) => (isActive ? 'active' : 'inactive')}
-								to='/about'
-								style={{ textDecoration: 'none', padding: '6px 15px' }}
+						<li style={{ width: '200px', paddingTop: '15px' }}>
+							<Link
+								to='/download'
+								style={{ textDecoration: 'none', padding: '6px 15px', color: 'white' }}
 							>
-								PRODUCT
-							</NavLink>
+								DOWNLOAD
+							</Link>
 						</li>
-						<li>
+						<li style={{ paddingTop: '15px' }}>
 							<NavLink
 								className={({ isActive }) => (isActive ? 'active' : 'inactive')}
 								to='/features'
@@ -38,13 +42,16 @@ function Navbar() {
 								FEATURES
 							</NavLink>
 						</li>
-						<li>
+						<li style={{ width: '200px', paddingTop: '15px' }}>
 							<NavLink
 								className={({ isActive }) => (isActive ? 'active' : 'inactive')}
-								to='/about'
-								style={{ textDecoration: 'none', padding: '6px 15px' }}
+								to='/login'
+								style={{ textDecoration: 'none', padding: '6px 15px', width: '100px' }}
+								onClick={() => {
+									loginText === 'LOG OUT' && logout()
+								}}
 							>
-								BUTTON
+								{loginText}
 							</NavLink>
 						</li>
 					</ul>

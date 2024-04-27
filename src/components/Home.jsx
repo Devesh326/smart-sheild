@@ -1,7 +1,10 @@
 import helmet from '../images/helmet.png'
 import '.././App.css'
+import { Link } from 'react-router-dom'
+import { useAuth } from '../context/AuthContext'
 
 function Home() {
+	const { loginText } = useAuth()
 	return (
 		<div className='section-one'>
 			<div className='left-view'>
@@ -17,7 +20,17 @@ function Home() {
 					for a person to be more focused on the road
 				</p>
 
-				<div className='login-btn'>Sign In</div>
+				<div className='login-btn'>
+					<Link
+						to='/login'
+						style={{
+							textDecoration: 'none',
+							color: '#6ccbcb',
+						}}
+					>
+						{loginText}
+					</Link>
+				</div>
 			</div>
 		</div>
 	)

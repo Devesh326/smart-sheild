@@ -1,6 +1,10 @@
 import { useState } from 'react'
 import FeatureCards from './FeatureCards'
 import cash from '../images/cash.jpeg'
+import video from '../video/Strike_Ride.mkv'
+import { Link } from 'react-router-dom'
+import Download from './Download'
+import { useNavigate } from 'react-router-dom'
 
 function Features() {
 	const [cards, setCards] = useState([
@@ -37,6 +41,8 @@ function Features() {
 		},
 	])
 
+	// const handleDownloadClick = () => <Download />
+
 	return (
 		<div className='features'>
 			<div className='feature'>FEATURES</div>
@@ -46,7 +52,6 @@ function Features() {
 				the creation of this project was to urge people to ride with the right gear
 				and follow the guidelines even at public places.
 			</p>
-
 			{cards.map((card) => (
 				<FeatureCards
 					key={card.id}
@@ -55,6 +60,15 @@ function Features() {
 					title={card.title}
 				/>
 			))}
+
+			{/* <Link>
+				<div class='embed-responsive embed-responsive-16by9'>
+					<iframe class='embed-responsive-item' src={video} allowfullscreen></iframe>
+				</div>
+			</Link> */}
+			<Link to='/download'>Download</Link>
+
+			{/* <button onClick={handleDownloadClick}>Download</button> */}
 		</div>
 	)
 }
